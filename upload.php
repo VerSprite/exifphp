@@ -48,7 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
    <script type="text/javascript">
    		function checkFile() {
    			var id_val = document.getElementById('photo_chooser').value;
@@ -70,7 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
    			}
    		}		
    </script>
-
     <div class="container">
     	<br><br>
       <div class="starter-template">
@@ -92,9 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
-
 <?php 
-
 } elseif (isset($_FILES['photo']) && ($_FILES['photo']['error'] == UPLOAD_ERR_OK)) {
 	
 	list($width, $height, $type, $attr) = getimagesize($_FILES['photo']['tmp_name']);
@@ -134,6 +130,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	
 	echo "Could not be upload!";
 }
-
-
 ?>
